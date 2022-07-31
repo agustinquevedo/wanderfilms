@@ -1,5 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Title, {
+  TitleColorEnum,
+  TitleSizeEnum,
+} from '../components/atoms/Title/Title'
 import Hero from '../components/layout/Hero/Hero'
 import Section, {
   SectionHeightEnum,
@@ -20,16 +24,36 @@ const Home: NextPage = () => {
       <Navbar />
       <Hero />
       <Section id="about" height={SectionHeightEnum.FULL_HEIGHT}>
-        <h1>About</h1>
+        <Title
+          text="About"
+          coloredTitle="the Team"
+          color={TitleColorEnum.ORANGE}
+          size={TitleSizeEnum.PRIMARY}
+        />
       </Section>
-      <Section id="projects" height={SectionHeightEnum.FULL_HEIGHT}>
-        <h1>Projects</h1>
+      <Section id="works" height={SectionHeightEnum.FULL_HEIGHT}>
+        <Title
+          text="Check"
+          coloredTitle="some Works"
+          color={TitleColorEnum.ORANGE}
+          size={TitleSizeEnum.PRIMARY}
+        />
       </Section>
       <Section id="services" height={SectionHeightEnum.FULL_HEIGHT}>
-        <h1>Services</h1>
+        <Title
+          text="Check"
+          coloredTitle="What We Can Do"
+          color={TitleColorEnum.ORANGE}
+          size={TitleSizeEnum.PRIMARY}
+        />
       </Section>
       <Section id="contact" height={SectionHeightEnum.FULL_HEIGHT}>
-        <h1>Contact</h1>
+        <Title
+          text="So tell us about"
+          coloredTitle="your project."
+          color={TitleColorEnum.ORANGE}
+          size={TitleSizeEnum.PRIMARY}
+        />
       </Section>
     </div>
   )
