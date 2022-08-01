@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
-  const [color, setColor] = useState('transparent')
+  const [color, setColor] = useState('')
 
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 80) {
-        setColor('black')
+        setColor('bg-black')
       } else {
-        setColor('transparent')
+        setColor('')
       }
     }
     window.addEventListener('scroll', changeColor)
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-[5] shadow-sm ease-in duration-300 bg-${color}`}
+      className={`fixed w-full z-[5] shadow-sm ease-in duration-300 ${color}`}
     >
       <div className="w-full">
         <div className="flex items-center h-20 w-full">
