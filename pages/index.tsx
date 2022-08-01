@@ -9,6 +9,7 @@ import Section, {
   SectionHeightEnum,
 } from '../components/layout/Section/Section'
 import Navbar from '../components/molecules/Navbar/Navbar'
+import Services from '../components/molecules/Navbar/Sections/Services/Services'
 
 const Home: NextPage = () => {
   return (
@@ -21,16 +22,19 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* Navigation */}
       <Navbar />
+
+      {/* Header */}
       <Hero />
-      <Section id="about" height={SectionHeightEnum.FULL_HEIGHT}>
-        <Title
-          text="About"
-          coloredTitle="the Team"
-          color={TitleColorEnum.ORANGE}
-          size={TitleSizeEnum.PRIMARY}
-        />
+
+      {/* Services Section */}
+      <Section id="services" height={SectionHeightEnum.MIN_CONTENT}>
+        <Services />
       </Section>
+
+      {/* Works Section */}
       <Section id="works" height={SectionHeightEnum.FULL_HEIGHT}>
         <Title
           text="Check"
@@ -39,14 +43,18 @@ const Home: NextPage = () => {
           size={TitleSizeEnum.PRIMARY}
         />
       </Section>
-      <Section id="services" height={SectionHeightEnum.FULL_HEIGHT}>
+
+      {/* About Section */}
+      <Section id="about" height={SectionHeightEnum.FULL_HEIGHT}>
         <Title
-          text="Check"
-          coloredTitle="What We Can Do"
+          text="About"
+          coloredTitle="the Team"
           color={TitleColorEnum.ORANGE}
           size={TitleSizeEnum.PRIMARY}
         />
       </Section>
+
+      {/* Contact Section */}
       <Section id="contact" height={SectionHeightEnum.FULL_HEIGHT}>
         <Title
           text="So tell us about"

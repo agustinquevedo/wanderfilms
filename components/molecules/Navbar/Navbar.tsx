@@ -30,14 +30,15 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
-                  activeClass="about"
-                  to="about"
+                  activeClass="Services"
+                  to="services"
                   smooth={true}
                   duration={500}
                   className="cursor-pointer hover:text-[#E72542] px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  About
+                  Services
                 </Link>
+
                 <Link
                   activeClass="works"
                   to="works"
@@ -49,13 +50,13 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                  activeClass="Services"
-                  to="services"
+                  activeClass="about"
+                  to="about"
                   smooth={true}
                   duration={500}
                   className="cursor-pointer hover:text-[#E72542] px-3 py-2 rounded-md text-sm font-medium"
                 >
-                  Services
+                  About
                 </Link>
 
                 <Link
