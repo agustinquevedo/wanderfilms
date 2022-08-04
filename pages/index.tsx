@@ -9,6 +9,7 @@ import Section, {
   SectionHeightEnum,
 } from '../components/layout/Section/Section'
 import Navbar from '../components/molecules/Navbar/Navbar'
+import About from '../components/molecules/Navbar/Sections/About/About'
 import Services from '../components/molecules/Navbar/Sections/Services/Services'
 
 const Home: NextPage = () => {
@@ -45,13 +46,8 @@ const Home: NextPage = () => {
       </Section>
 
       {/* About Section */}
-      <Section id="about" height={SectionHeightEnum.FULL_HEIGHT}>
-        <Title
-          text="About"
-          coloredTitle="the Team"
-          color={TitleColorEnum.ORANGE}
-          size={TitleSizeEnum.PRIMARY}
-        />
+      <Section id="about" height={SectionHeightEnum.MIN_CONTENT}>
+        <About />
       </Section>
 
       {/* Contact Section */}

@@ -93,10 +93,6 @@ const Services = () => {
           size={TitleSizeEnum.SECONDARY}
         />
       </div>
-
-      <div className="flex justify-between border-t-2 border-white">
-        <h3>Title</h3>
-      </div>
     </>
   )
 }
