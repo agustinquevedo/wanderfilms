@@ -16,11 +16,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Traveling to Create</title>
-        <meta
-          name="description"
-          content="Filmmaking and Photography while Traveling the world"
-        />
+        <title>Wander Films</title>
+        <meta name="description" content="Chasing the dream" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
