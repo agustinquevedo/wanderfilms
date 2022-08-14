@@ -1,16 +1,17 @@
 import Title, {
   TitleColorEnum,
   TitleSizeEnum,
-} from '../../../../atoms/Title/Title'
+} from '../../../atoms/Title/Title'
 import Image from 'next/image'
 
-import ServicesImage1 from '../../../../../assets/images/example1.webp'
-import ServicesImage2 from '../../../../../assets/images/example2.webp'
-import ServicesImage3 from '../../../../../assets/images/example3.webp'
+import ServicesImage1 from '../../../../assets/images/example1.webp'
+import ServicesImage2 from '../../../../assets/images/example2.webp'
+import ServicesImage3 from '../../../../assets/images/example3.webp'
+import Section, { SectionHeightEnum } from '../../../layout/Section/Section'
 
 const Services = () => {
   return (
-    <>
+    <Section id="services" height={SectionHeightEnum.MIN_CONTENT}>
       <Title
         text="Check"
         coloredTitle="What We Can Do"
@@ -19,7 +20,7 @@ const Services = () => {
       />
 
       <div className="grid grid-cols-1 gap-y-10 gap-x-6 mb-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-        <div className="block max-w-md bg-gray-900 rounded-2xl">
+        <div className="w-full bg-gray-900 rounded-2xl">
           <div className="w-full h-96 relative">
             <Image
               alt={'services image'}
@@ -41,7 +42,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="block max-w-md bg-gray-900 rounded-2xl">
+        <div className="w-full bg-gray-900 rounded-2xl">
           <div className="w-full h-96 relative">
             <Image
               alt={'services image'}
@@ -63,7 +64,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        <div className="block max-w-md bg-gray-900 rounded-2xl">
+        <div className="w-full bg-gray-900 rounded-2xl">
           <div className="w-full h-96 relative">
             <Image
               alt={'services image'}
@@ -93,7 +94,7 @@ const Services = () => {
           size={TitleSizeEnum.SECONDARY}
         />
       </div>
-    </>
+    </Section>
   )
 }
 

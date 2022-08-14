@@ -17,7 +17,7 @@ export interface TitleProps {
 const Title = ({ text, coloredTitle, color, size }: TitleProps) => {
   return (
     <div>
-      <h2 className={`font-bold ${size} mb-4 md:mb-6 lg:mb-8`}>
+      <h2 className={`text-white font-bold ${size} mb-4 md:mb-6 lg:mb-8`}>
         {text} <br />
         <span className={color}>{coloredTitle}</span>
       </h2>

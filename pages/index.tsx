@@ -9,8 +9,9 @@ import Section, {
   SectionHeightEnum,
 } from '../components/layout/Section/Section'
 import Navbar from '../components/molecules/Navbar/Navbar'
-import About from '../components/molecules/Navbar/Sections/About/About'
-import Services from '../components/molecules/Navbar/Sections/Services/Services'
+import About from '../components/molecules/Sections/About/About'
+import Contact from '../components/molecules/Sections/Contact/Contact'
+import Services from '../components/molecules/Sections/Services/Services'
 
 const Home: NextPage = () => {
   return (
@@ -28,9 +29,7 @@ const Home: NextPage = () => {
       <Hero />
 
       {/* Services Section */}
-      <Section id="services" height={SectionHeightEnum.MIN_CONTENT}>
-        <Services />
-      </Section>
+      <Services />
 
       {/* Works Section */}
       <Section id="works" height={SectionHeightEnum.FULL_HEIGHT}>
@@ -43,19 +42,10 @@ const Home: NextPage = () => {
       </Section>
 
       {/* About Section */}
-      <Section id="about" height={SectionHeightEnum.MIN_CONTENT}>
-        <About />
-      </Section>
+      <About />
 
       {/* Contact Section */}
-      <Section id="contact" height={SectionHeightEnum.FULL_HEIGHT}>
-        <Title
-          text="So tell us about"
-          coloredTitle="your project."
-          color={TitleColorEnum.ORANGE}
-          size={TitleSizeEnum.PRIMARY}
-        />
-      </Section>
+      <Contact />
     </div>
   )
 }
