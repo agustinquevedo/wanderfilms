@@ -4,6 +4,7 @@ import HeroImage from '../../../assets/images/hero.webp'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { XIcon } from '@heroicons/react/outline'
+import ReactPlayer from 'react-player/lazy'
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -82,7 +83,18 @@ const Hero = () => {
 
                 {/* Replace with your content */}
                 <div className="flex flex-col justify-center items-center h-full px-4 py-6 sm:px-0">
-                  <div className="w-full border-4 border-dashed border-gray-400 rounded-lg h-96" />
+                  {/* <div className="w-full border-4 border-dashed border-gray-400 rounded-lg h-96" /> */}
+                  <ReactPlayer
+                    url="https://player.vimeo.com/video/739953731?h=d32672fd06"
+                    playing
+                    width={'100%'}
+                    height={'auto'}
+                    config={{
+                      vimeo: {
+                        playerOptions: { responsive: true, quality: 1080 },
+                      },
+                    }}
+                  ></ReactPlayer>
                 </div>
                 {/* /End replace */}
               </Dialog.Panel>
