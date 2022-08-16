@@ -4,7 +4,7 @@ import HeroImage from '../../../assets/images/hero.webp'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { XIcon } from '@heroicons/react/outline'
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from 'react-player/vimeo'
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -81,21 +81,20 @@ const Hero = () => {
                   </button>
                 </div>
 
-                {/* Replace with your content */}
-                <div className="flex flex-col justify-center items-center h-full px-4 py-6 sm:px-0">
-                  {/* <div className="w-full border-4 border-dashed border-gray-400 rounded-lg h-96" /> */}
+                {/* Video */}
+                <div className="flex flex-col justify-center items-center h-full px-4 py-6 sm:px-0 overflow-y-auto">
                   <ReactPlayer
-                    url="https://player.vimeo.com/video/739953731?h=d32672fd06"
+                    url="https://player.vimeo.com/video/739990314"
                     playing
                     width={'100%'}
                     height={'auto'}
                     config={{
-                      vimeo: {
-                        playerOptions: {
-                          responsive: true,
-                          quality: 1080,
-                          autoplay: true,
-                        },
+                      title: 'Wander films',
+                      playerOptions: {
+                        responsive: true,
+                        quality: 1080,
+                        id: false,
+                        autoplay: true,
                       },
                     }}
                   ></ReactPlayer>
