@@ -91,7 +91,11 @@ const Hero = () => {
                     height={'auto'}
                     config={{
                       vimeo: {
-                        playerOptions: { responsive: true, quality: 1080 },
+                        playerOptions: {
+                          responsive: true,
+                          quality: 1080,
+                          autoplay: true,
+                        },
                       },
                     }}
                   ></ReactPlayer>
