@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -66,7 +66,7 @@ export default function Navigation() {
             </div>
             {/* Mobile menu button*/}
             <div className="z-[5] flex items-center sm:hidden">
-              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
                   <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -77,23 +77,35 @@ export default function Navigation() {
             </div>
           </ContentWrapper>
 
-          <Disclosure.Panel className="z-[4] sm:hidden absolute top-0 left-0 right-0 bottom-0 w-full h-screen flex items-center justify-center bg-black">
-            <div className="px-2 pt-2 pb-3 flex flex-col">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as={Link}
-                  activeClass={item.name}
-                  to={item.href}
-                  smooth={true}
-                  duration={500}
-                  className="text-white text-2xl text-center cursor-pointer hover:text-[#E72542] px-3 py-2 rounded-md font-medium"
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
+          <Transition
+            enter="transition duration-100 ease-out"
+            enterFrom="transform scale-95 opacity-0"
+            enterTo="transform scale-100 opacity-100"
+            leave="transition duration-75 ease-out"
+            leaveFrom="transform scale-100 opacity-100"
+            leaveTo="transform scale-95 opacity-0"
+            className={
+              'z-[4] sm:hidden absolute top-0 left-0 right-0 bottom-0 w-full h-screen flex items-center justify-center bg-black'
+            }
+          >
+            <Disclosure.Panel>
+              <div className="px-2 pt-2 pb-3 flex flex-col">
+                {navigation.map((item) => (
+                  <Disclosure.Button
+                    key={item.name}
+                    as={Link}
+                    activeClass={item.name}
+                    to={item.href}
+                    smooth={true}
+                    duration={500}
+                    className="text-white text-2xl text-center cursor-pointer hover:text-[#E72542] px-3 py-2 rounded-md font-medium"
+                  >
+                    {item.name}
+                  </Disclosure.Button>
+                ))}
+              </div>
+            </Disclosure.Panel>
+          </Transition>
         </>
       )}
     </Disclosure>
