@@ -70,8 +70,8 @@ const Hero = () => {
             className="z-[6] absolute top-0 right-0 bottom-0 left-0  bg-black"
           >
             <ContentWrapper>
-              <Dialog.Panel className="w-full h-screen">
-                <div className="flex justify-end pt-6">
+              <Dialog.Panel className="w-full h-screen flex flex-col justify-center">
+                <div className="flex justify-end">
                   <button
                     onClick={() => setIsOpen(false)}
                     className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none"
@@ -82,12 +82,13 @@ const Hero = () => {
                 </div>
 
                 {/* Video */}
-                <div className="flex flex-col justify-center items-center h-full px-4 py-6 sm:px-0 overflow-y-auto">
+
+                <div className="relative pt-[56.25%] aspect-video">
                   <ReactPlayer
                     url="https://player.vimeo.com/video/739990314"
                     playing
                     width={'100%'}
-                    height={'auto'}
+                    height={'100%'}
                     config={{
                       title: 'Wander films',
                       playerOptions: {
@@ -97,8 +98,10 @@ const Hero = () => {
                         autoplay: true,
                       },
                     }}
+                    className="absolute top-0 left-0"
                   ></ReactPlayer>
                 </div>
+
                 {/* /End replace */}
               </Dialog.Panel>
             </ContentWrapper>

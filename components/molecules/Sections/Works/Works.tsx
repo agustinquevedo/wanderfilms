@@ -3,7 +3,7 @@ import Title, {
   TitleSizeEnum,
 } from '../../../atoms/Title/Title'
 import Section, { SectionHeightEnum } from '../../../layout/Section/Section'
-// import Image from 'next/image'
+import Link from 'next/link'
 
 const Works = () => {
   return (
@@ -14,6 +14,12 @@ const Works = () => {
         color={TitleColorEnum.ORANGE}
         size={TitleSizeEnum.PRIMARY}
       />
+      <button className="p-7 text-white">
+        <Link href="/photos">Photos</Link>
+      </button>
+      <button className="p-7 text-white">
+        <Link href="/videos">Videos</Link>
+      </button>
     </Section>
   )
 }
