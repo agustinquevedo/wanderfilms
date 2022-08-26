@@ -1,9 +1,10 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import ContentWrapper from '../ContentWrapper/ContentWrapper'
-import HeroImage from '../../../assets/images/hero.webp'
+// import HeroImage from '../../../assets/images/hero.webp'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { XIcon } from '@heroicons/react/outline'
+import { PlayIcon } from '@heroicons/react/solid'
 import ReactPlayer from 'react-player/vimeo'
 
 const Hero = () => {
@@ -11,16 +12,25 @@ const Hero = () => {
   return (
     <>
       <header className="w-full h-screen pt-20 relative">
-        <Image
+        <video
+          id="background-video"
+          loop
+          autoPlay
+          muted
+          className="z-[2] absolute top-0 bottom-0 left-0 right-0 w-full h-screen object-cover"
+        >
+          <source src={'/video/WebHeading.mp4'} type="video/mp4" />
+        </video>
+        {/* <Image
           alt={'hero image'}
           src={HeroImage}
           layout={'fill'}
           objectFit={'cover'}
           priority
           className="z-[2] absolute top-0 bottom-0 left-0 right-0 w-full h-screen"
-        />
-        {/* Image overlay */}
-        <div className="z-[3] absolute top-0 bottom-0 left-0 right-0 w-full h-screen bg-black/70" />
+        /> */}
+        {/* Image Video overlay */}
+        <div className="z-[3] absolute top-0 bottom-0 left-0 right-0 w-full h-screen bg-gradient-to-t from-black via-black/75 to-black/50" />
         <div className="z-[4] absolute top-0 bottom-0 left-0 right-0 flex justify-center flex-col">
           <ContentWrapper>
             <div className="flex justify-center items-center text-center flex-col font-bold lg:text-8xl md:text-6xl text-4xl space-y-2">
@@ -30,27 +40,15 @@ const Hero = () => {
                   Happy Vibes
                 </span>
               </h1>
-              <button
-                type="button"
+            </div>
+            <div className="flex justify-center items-center text-center flex-col font-bold mt-8 lg:text-8xl md:text-6xl text-4xl space-y-2">
+              <a
                 onClick={() => setIsOpen(true)}
-                className="text-gray-400 border border-gray-400 animate-pulse hover:animate-none hover:border-white hover:text-white focus:ring-4 focus:outline-none focus:ring-grey-300 rounded-full text-2xl p-3.5 text-center inline-flex items-center"
+                className="cursor-pointer text-gray-400 hover:text-white  focus:outline-none  rounded-full "
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="pl-1 w-6 h-6 "
-                >
-                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
+                <PlayIcon className="w-20 h-20" />
                 <span className="sr-only">Play button</span>
-              </button>
+              </a>
             </div>
           </ContentWrapper>
         </div>
@@ -67,18 +65,18 @@ const Hero = () => {
           <Dialog
             open={isOpen}
             onClose={() => setIsOpen(false)}
-            className="z-[6] absolute top-0 right-0 bottom-0 left-0  bg-black"
+            className="z-[6] absolute top-0 right-0 bottom-0 left-0 w-full h-screen  bg-black"
           >
             <ContentWrapper>
               <Dialog.Panel className="w-full h-screen flex flex-col justify-center">
                 <div className="flex justify-end">
-                  <button
+                  <a
                     onClick={() => setIsOpen(false)}
-                    className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none"
+                    className="text-gray-400 hover:text-white focus:outline-none"
                   >
                     <span className="sr-only">Close modal</span>
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
-                  </button>
+                    <XIcon className="w-20 h-20" aria-hidden="true" />
+                  </a>
                 </div>
 
                 {/* Video */}

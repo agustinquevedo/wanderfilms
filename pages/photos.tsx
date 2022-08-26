@@ -5,10 +5,6 @@ import cx from 'classnames'
 import { supabase } from '../helpers/supabaseClient'
 import { useState } from 'react'
 import ContentWrapper from '../components/layout/ContentWrapper/ContentWrapper'
-import Title, {
-  TitleColorEnum,
-  TitleSizeEnum,
-} from '../components/atoms/Title/Title'
 import Link from 'next/link'
 
 export type Image = {
@@ -23,7 +19,7 @@ const Photos = ({ images }: { images: Image[] }) => {
   return (
     <ContentWrapper>
       <div className="py-4 md:py-6 lg:py-8">
-        <a className="text-gray-400 hover:text-white text-5xl cursor-pointer">
+        <a className="text-gray-400 hover:text-white cursor-pointer">
           <Link href="/" scroll={false}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,12 +38,12 @@ const Photos = ({ images }: { images: Image[] }) => {
           </Link>
         </a>
       </div>
-      <Title
-        text="We do"
-        coloredTitle="Photography"
-        color={TitleColorEnum.ORANGE}
-        size={TitleSizeEnum.PRIMARY}
-      />
+      <h1 className="text-white pb-10 font-bold lg:text-8xl md:text-6xl text-4xl">
+        We do<br></br>
+        <span className="text-transparent lg:text-8xl md:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-[#E72542] to-[#E24336]">
+          Photography
+        </span>
+      </h1>
       <div className=" grid grid-cols-1 gap-y-10 gap-x-6 mb-20 md:grid-cols-2 py-4 md:py-6 lg:py-8 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
         {images.map((image) => (
           <a className="group" key={image.id}>
@@ -55,8 +51,11 @@ const Photos = ({ images }: { images: Image[] }) => {
               <Image
                 src={image.url}
                 alt={image.title}
-                layout="fill"
-                objectFit="cover"
+                loading={'lazy'}
+                layout="responsive"
+                objectFit="scale-down"
+                width={1080}
+                height={1350}
                 className={cx(
                   'rounded-lg duration-700 ease-in-out group-hover:opacity-75',
                   isLoading
