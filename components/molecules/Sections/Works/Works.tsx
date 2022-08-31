@@ -30,8 +30,8 @@ const Works = () => {
               className="z-[2] absolute top-0 bottom-0 left-0 right-0 w-full  rounded-2xl"
             />
             <div className="z-[3] absolute top-0 bottom-0 left-0 right-0 w-full  bg-black opacity-50 group-hover:opacity-70" />
-            <div className="z-[4] absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center flex-col text-white text-3xl font-bold">
-              Photos
+            <div className="z-[4] absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center flex-col text-white text-center">
+              <h3 className="text-3xl font-bold mb-4">Photos</h3>
             </div>
           </div>
         </Link>

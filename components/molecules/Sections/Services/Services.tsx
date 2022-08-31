@@ -31,9 +31,9 @@ const features = [
     icon: FilmIcon,
   },
   {
-    name: 'Fancy Title #4',
+    name: 'We love what we do',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We do our job with love and dedication, and work hard to create high quality content.',
     icon: HeartIcon,
   },
 ]
@@ -61,13 +61,11 @@ const Services = () => {
           </div>
           <div className="p-6">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
-              Services Idea 1
+              Video
             </h5>
             <p className="font-normal text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Our passion is to showcase a product using story telling and crazy
+              locations to make your brand shine as it never had before.
             </p>
           </div>
         </div>
@@ -83,7 +81,7 @@ const Services = () => {
           </div>
           <div className="p-6">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
-              Services Idea 2
+              Photography
             </h5>
             <p className="font-normal text-gray-400">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -105,13 +103,13 @@ const Services = () => {
           </div>
           <div className="p-6">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
-              Services Idea 3
+              FPV
             </h5>
             <p className="font-normal text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              It comes from First Person View and it means that we stick a
+              camera on top of a racing drone and capture crazy aerial footage
+              never seen before. Compared to a regular drone this is like having
+              a F1 Car.
             </p>
           </div>
         </div>
@@ -119,7 +117,7 @@ const Services = () => {
 
       <div className="lg:text-center">
         <p className="mt-2 text-4xl leading-8 font-bold tracking-tight text-white sm:text-4xl sm:tracking-tight">
-          We travel so you dont need to
+          Still Looking for more?
         </p>
         <p className="mt-4 max-w-2xl text-xl text-gray-white lg:mx-auto">
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
@@ -129,7 +127,10 @@ const Services = () => {
 
       <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
         {features.map((feature) => (
-          <div key={feature.name} className="relative">
+          <div
+            key={feature.name}
+            className="relative border-gray-700 border rounded-md p-4"
+          >
             <dt>
               <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 text-white">
                 <feature.icon className="h-6 w-6" aria-hidden="true" />

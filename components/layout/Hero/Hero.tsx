@@ -70,24 +70,22 @@ const Hero = () => {
           <Dialog
             open={isOpen}
             onClose={() => setIsOpen(false)}
-            className="z-[6] absolute top-0 right-0 bottom-0 left-0 w-full h-screen  bg-black"
+            className="z-[6] block absolute top-0 right-0 bottom-0 left-0 w-full h-screen bg-black overflow-hidden"
           >
-            <ContentWrapper>
-              <Dialog.Panel className="w-full h-screen flex flex-col justify-center">
-                <div className="flex justify-end">
+            <ContentWrapper className="h-full flex flex-col justify-center">
+              <Dialog.Panel>
+                <Dialog.Title className=" mb-4 md:mb-8">
                   <a
                     onClick={() => setIsOpen(false)}
-                    className="text-gray-400 hover:text-white focus:outline-none"
+                    className="text-gray-400 hover:text-white cursor-pointer focus:outline-none"
                   >
                     <span className="sr-only">Close modal</span>
                     <XIcon
-                      className="w-10 h-10 md:w-20 md:h-20 "
+                      className="w-10 h-10 md:w-20 md:h-20 ml-auto"
                       aria-hidden="true"
                     />
                   </a>
-                </div>
-
-                {/* Video */}
+                </Dialog.Title>
 
                 <div className="relative pt-[56.25%] aspect-video">
                   <ReactPlayer
@@ -107,8 +105,6 @@ const Hero = () => {
                     className="absolute top-0 left-0"
                   ></ReactPlayer>
                 </div>
-
-                {/* /End replace */}
               </Dialog.Panel>
             </ContentWrapper>
           </Dialog>
