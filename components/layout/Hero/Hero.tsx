@@ -14,14 +14,19 @@ const Hero = () => {
       <header className="w-full h-screen pt-20 relative">
         <video
           id="background-video"
+          playsInline
           loop
           autoPlay
           muted
-          className="z-[2] absolute top-0 bottom-0 left-0 right-0 w-full h-screen object-cover"
+          className="z-[2] block absolute top-0 bottom-0 left-0 right-0 w-full h-screen object-cover"
         >
           <source src={'/video/hero-loop.mp4'} type="video/mp4" />
         </video>
-        {/* <Image
+        {/* 
+        //
+        TODO: Add logic to show an image if the video is not loading.
+        //
+        <Image
           alt={'hero image'}
           src={HeroImage}
           layout={'fill'}
@@ -35,9 +40,9 @@ const Hero = () => {
           <ContentWrapper>
             <div className="flex justify-center items-center text-center flex-col font-bold lg:text-8xl md:text-6xl text-4xl space-y-2">
               <h1 className="text-white pb-10">
-                Chasing the dream <br></br>
+                Wander Films <br></br>
                 <span className="text-transparent lg:text-8xl md:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-[#E72542] to-[#E24336]">
-                  Happy Vibes
+                  Chasing the Dream
                 </span>
               </h1>
             </div>
@@ -75,7 +80,10 @@ const Hero = () => {
                     className="text-gray-400 hover:text-white focus:outline-none"
                   >
                     <span className="sr-only">Close modal</span>
-                    <XIcon className="w-20 h-20" aria-hidden="true" />
+                    <XIcon
+                      className="w-10 h-10 md:w-20 md:h-20 "
+                      aria-hidden="true"
+                    />
                   </a>
                 </div>
 
