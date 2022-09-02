@@ -1,5 +1,5 @@
 import Video from '../assets/images/video.webp'
-import Photography from '../assets/images/Photography.webp'
+import Photography from '../assets/images/photography.webp'
 import FPV from '../assets/images/fpv.webp'
 
 export const services = [
