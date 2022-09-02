@@ -5,8 +5,8 @@ import Title, {
 import Section, { SectionHeightEnum } from '../../../layout/Section/Section'
 import Link from 'next/link'
 import Image from 'next/image'
-import PhotographyImage from '../../../../assets/images/photo.jpg'
-import VideoImage from '../../../../assets/images/video.jpg'
+import ServicePhotography from '../../../../assets/images/service-photography.jpg'
+import ServiceVideo from '../../../../assets/images/service-video.jpg'
 
 const Works = () => {
   return (
@@ -24,7 +24,7 @@ const Works = () => {
             <div className="group relative cursor-pointer w-full h-min aspect-[4/5] rounded-2xl bg-gray-400">
               <Image
                 alt={'hero image'}
-                src={PhotographyImage}
+                src={ServicePhotography}
                 layout={'fill'}
                 objectFit={'cover'}
                 priority
@@ -43,7 +43,7 @@ const Works = () => {
             <div className="group relative cursor-pointer w-full h-min aspect-[4/5] rounded-2xl bg-gray-400">
               <Image
                 alt={'hero image'}
-                src={VideoImage}
+                src={ServiceVideo}
                 layout={'fill'}
                 objectFit={'cover'}
                 priority

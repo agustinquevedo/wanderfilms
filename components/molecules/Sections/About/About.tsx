@@ -4,19 +4,11 @@ import Title, {
   TitleSizeEnum,
 } from '../../../atoms/Title/Title'
 import Agustin from '../../../../assets/profiles/agustin.jpg'
-// import Agustin2 from '../../../../assets/profiles/agustin_hover.jpg'
 import Marc from '../../../../assets/profiles/marc.jpg'
-// import Marc2 from '../../../../assets/profiles/marc_hover.jpg'
 import Franco from '../../../../assets/profiles/franco.jpg'
 import Section, { SectionHeightEnum } from '../../../layout/Section/Section'
-// import Franco2 from '../../../../assets/profiles/franco_hover.jpg'
-// import { useRef } from 'react'
-// import { useHover } from 'usehooks-ts'
 
 const About = () => {
-  // const hoverRef = useRef(null)
-  // const isHover = useHover(hoverRef)
-
   return (
     <Section id="about" height={SectionHeightEnum.MIN_CONTENT}>
       <Title
@@ -28,7 +20,7 @@ const About = () => {
 
       <div className="grid grid-cols-1 gap-y-10 gap-x-6 mb-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
         {/* CARD  */}
-        <div className="w-full h-min bg-gray-900 rounded-2xl">
+        <div className="w-full bg-gray-900 rounded-2xl">
           <Image
             alt={'services image'}
             src={Agustin}
@@ -44,8 +36,10 @@ const About = () => {
             </p>
             <div className="pt-4">
               <a
-                href="#"
+                href="https://www.instagram.com/agustin.quevedo/"
+                target="_blank"
                 className="text-gray-700 hover:text-white font-medium rounded-lg text-sm  py-2.5 text-center inline-flex items-center mr-2"
+                rel="noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +63,7 @@ const About = () => {
           </div>
         </div>
         {/* CARD  */}
-        <div className="w-full h-min bg-gray-900 rounded-2xl">
+        <div className="w-full bg-gray-900 rounded-2xl">
           <Image
             alt={'services image'}
             src={Franco}
@@ -88,8 +82,10 @@ const About = () => {
             </p>
             <div className="pt-4">
               <a
-                href="#"
+                href="https://www.instagram.com/shotbyfgs/"
+                target="_blank"
                 className="text-gray-700 hover:text-white font-medium rounded-lg text-sm  py-2.5 text-center inline-flex items-center mr-2"
+                rel="noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +109,7 @@ const About = () => {
           </div>
         </div>
         {/* CARD  */}
-        <div className="w-full h-min bg-gray-900 rounded-2xl">
+        <div className="w-full  bg-gray-900 rounded-2xl">
           <Image alt={'services image'} src={Marc} className="rounded-t-2xl" />
           <div className="p-6">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
@@ -128,8 +124,10 @@ const About = () => {
             </p>
             <div className="pt-4">
               <a
-                href="#"
+                href="https://www.instagram.com/marc_vilalta/"
+                target="_blank"
                 className="text-gray-700 hover:text-white font-medium rounded-lg text-sm  py-2.5 text-center inline-flex items-center mr-2"
+                rel="noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

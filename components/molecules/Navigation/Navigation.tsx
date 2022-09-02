@@ -15,35 +15,54 @@ const navigation = [
 export default function Navigation() {
   const [color, setColor] = useState('')
   const [size, setSize] = useState('h-20')
+  const [opacity, setOpacity] = useState('opacity-0')
 
   const scrollToTop = () => {
     scroll.scrollToTop()
   }
 
   useEffect(() => {
+    const pageTitle = () => {
+      if (window.scrollY >= 330) {
+        setOpacity('opacity-100')
+      } else {
+        setOpacity('opacity-0')
+      }
+    }
+
     const changeColor = () => {
-      if (window.scrollY >= 80) {
+      if (window.scrollY >= 330) {
         setColor('bg-black')
-        setSize('h-16')
       } else {
         setColor('')
+      }
+    }
+
+    const changeSize = () => {
+      if (window.scrollY >= 350) {
+        setSize('h-16')
+      } else {
         setSize('h-20')
       }
     }
     window.addEventListener('scroll', changeColor)
+    window.addEventListener('scroll', pageTitle)
+    window.addEventListener('scroll', changeSize)
   }, [])
 
   return (
     <Disclosure
       as="nav"
-      className={`fixed w-full ${size} flex items-center z-[5]  shadow-sm ease-in duration-300 ${color}`}
+      className={`fixed w-full ${size} flex items-center z-[5]  shadow-sm  ${color} transition-all ease-in duration-300`}
     >
       {({ open }) => (
         <>
-          <ContentWrapper className="flex justify-between">
+          <ContentWrapper className="flex justify-between opa">
             <div className="flex-shrink-0 flex items-center">
               <a onClick={scrollToTop}>
-                <h1 className="text-white font-bold text-2xl cursor-pointer">
+                <h1
+                  className={`text-white font-bold text-2xl cursor-pointer ${opacity} transition ease-in duration-300`}
+                >
                   Wander <span className="text-[#E72542]">Films</span>
                 </h1>
               </a>

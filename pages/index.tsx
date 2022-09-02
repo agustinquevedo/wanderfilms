@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Hero from '../components/layout/Hero/Hero'
+import Hero from '../components/molecules/Hero/Hero'
 import Navigation from '../components/molecules/Navigation/Navigation'
 import About from '../components/molecules/Sections/About/About'
 import Contact from '../components/molecules/Sections/Contact/Contact'

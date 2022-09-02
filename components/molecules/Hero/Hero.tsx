@@ -1,14 +1,27 @@
 // import Image from 'next/image'
-import ContentWrapper from '../ContentWrapper/ContentWrapper'
+import ContentWrapper from '../../layout/ContentWrapper/ContentWrapper'
 // import HeroImage from '../../../assets/images/hero.webp'
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { XIcon } from '@heroicons/react/outline'
 import { PlayIcon } from '@heroicons/react/solid'
 import ReactPlayer from 'react-player/vimeo'
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [opacity, setOpacity] = useState('opacity-1')
+
+  useEffect(() => {
+    const pageTitle = () => {
+      if (window.scrollY >= 330) {
+        setOpacity('opacity-0 scale-75 -translate-x-52 -translate-y-42')
+      } else {
+        setOpacity('opacity-1 scale-100 translate-x-0 translate-y-0')
+      }
+    }
+    window.addEventListener('scroll', pageTitle)
+  }, [])
+
   return (
     <>
       <header className="w-full h-screen pt-20 relative">
@@ -38,10 +51,12 @@ const Hero = () => {
         <div className="z-[3] absolute top-0 bottom-0 left-0 right-0 w-full h-screen bg-gradient-to-t from-black via-black/75 to-black/50" />
         <div className="z-[4] absolute top-0 bottom-0 left-0 right-0 flex justify-center flex-col">
           <ContentWrapper>
-            <div className="flex justify-center items-center text-center flex-col font-bold lg:text-8xl md:text-6xl text-4xl space-y-2">
-              <h1 className="text-white pb-10">
-                Wander Films <br></br>
-                <span className="text-transparent lg:text-8xl md:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-[#E72542] to-[#E24336]">
+            <div className="flex justify-center items-center space-y-2">
+              <h1
+                className={`text-white text-center flex-col font-bold lg:text-9xl md:text-7xl text-5xl pb-10 ${opacity} transition-all ease-in duration-300`}
+              >
+                Wander Films <br />
+                <span className="text-transparent  lg:text-8xl md:text-6xl text-4xl bg-clip-text bg-gradient-to-r from-[#E72542] to-[#E24336]">
                   Chasing the Dream
                 </span>
               </h1>
