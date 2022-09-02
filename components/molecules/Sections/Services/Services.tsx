@@ -8,35 +8,35 @@ import ServicesImage1 from '../../../../assets/images/example1.webp'
 import ServicesImage2 from '../../../../assets/images/example2.webp'
 import ServicesImage3 from '../../../../assets/images/example3.webp'
 import Section, { SectionHeightEnum } from '../../../layout/Section/Section'
-import { CameraIcon, GlobeAltIcon } from '@heroicons/react/outline'
-import { FilmIcon, HeartIcon } from '@heroicons/react/solid'
+// import { CameraIcon, GlobeAltIcon } from '@heroicons/react/outline'
+// import { FilmIcon, HeartIcon } from '@heroicons/react/solid'
 
-const features = [
-  {
-    name: 'Fancy Title #1',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CameraIcon,
-  },
-  {
-    name: 'Fancy Title #2',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
-  },
-  {
-    name: 'Fancy Title #3',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FilmIcon,
-  },
-  {
-    name: 'We love what we do',
-    description:
-      'We do our job with love and dedication, and work hard to create high quality content.',
-    icon: HeartIcon,
-  },
-]
+// const features = [
+//   {
+//     name: 'Fancy Title #1',
+//     description:
+//       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+//     icon: CameraIcon,
+//   },
+//   {
+//     name: 'Fancy Title #2',
+//     description:
+//       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+//     icon: GlobeAltIcon,
+//   },
+//   {
+//     name: 'Fancy Title #3',
+//     description:
+//       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+//     icon: FilmIcon,
+//   },
+//   {
+//     name: 'We love what we do',
+//     description:
+//       'We do our job with love and dedication, and work hard to create high quality content.',
+//     icon: HeartIcon,
+//   },
+// ]
 
 const Services = () => {
   return (
@@ -64,8 +64,10 @@ const Services = () => {
               Video
             </h5>
             <p className="font-normal text-gray-400">
-              Our passion is to showcase a product using story telling and crazy
-              locations to make your brand shine as it never had before.
+              We work the extra mile from the story telling to planning and
+              direction of the story, every detail from the creative concept to
+              the execution is worked along with the client to make your brand
+              stand out while keeping it truthful to their core values.
             </p>
           </div>
         </div>
@@ -84,10 +86,9 @@ const Services = () => {
               Photography
             </h5>
             <p className="font-normal text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Inspire your audience to take action with unique images that
+              create a mood and emotions, and nothing makes a more compelling
+              story than emotions.
             </p>
           </div>
         </div>
@@ -106,17 +107,18 @@ const Services = () => {
               FPV
             </h5>
             <p className="font-normal text-gray-400">
-              It comes from First Person View and it means that we stick a
-              camera on top of a racing drone and capture crazy aerial footage
-              never seen before. Compared to a regular drone this is like having
-              a F1 Car.
+              FPV stands for First Person View, but the best was to describe it
+              would be like comparing a normal drone as a sport car and FPV as a
+              F1 race car. This takes aerial shooting to the next level,
+              allowing us to get as close as never before to the action,
+              obtaining images that redefine the concept of action filming.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="lg:text-center">
-        <p className="mt-2 text-4xl leading-8 font-bold tracking-tight text-white sm:text-4xl sm:tracking-tight">
+      <div className="text-white lg:text-center">
+        <p className="mt-2 text-4xl leading-8 font-bold tracking-tight  sm:text-4xl sm:tracking-tight">
           Still Looking for more?
         </p>
         <p className="mt-4 max-w-2xl text-xl text-gray-white lg:mx-auto">
@@ -125,7 +127,7 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+      {/* <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
         {features.map((feature) => (
           <div
             key={feature.name}
@@ -144,7 +146,7 @@ const Services = () => {
             </dd>
           </div>
         ))}
-      </div>
+      </div> */}
     </Section>
   )
 }

@@ -80,8 +80,11 @@ const About = () => {
               Franco Salomon
             </h5>
             <p className="font-normal text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              After completing his bachelor education with a degree in
+              advertising, soon enough he found his way into the world of
+              content creation, combining the knowledge of strategic planning
+              and branding with the execution both in photography and
+              filmmaking.
             </p>
             <div className="pt-4">
               <a
@@ -117,8 +120,11 @@ const About = () => {
               Marc Vilalta
             </h5>
             <p className="font-normal text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Is a self tought filmmaker from Spain who’s passions is to share
+              stories that motivate people to follow his dreams. He describes
+              himself like an adrenaline yonkie and… if you see somebody jumping
+              from crazy heights while doing a backflip there is a high chance
+              it’s him.
             </p>
             <div className="pt-4">
               <a
