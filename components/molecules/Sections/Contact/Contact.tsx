@@ -9,12 +9,16 @@ import { useForm } from '@formcarry/react'
 function MyForm() {
   // Call the "useForm" hook in your function component
   const { state, submit } = useForm({
-    id: 'jBUlHIsAh',
+    id: 'LXrQTuDAC',
   })
 
   // Success message
   if (state.submitted) {
-    return <div>Thank you! We received your submission.</div>
+    return (
+      <div className="w-full h-min bg-gray-900 text-white d-flex justify-center items center text-center">
+        <span className="text-lg">Thank you! We received your submission.</span>
+      </div>
+    )
   }
 
   return (
@@ -89,7 +93,7 @@ const Contact = () => {
             size={TitleSizeEnum.PRIMARY}
           />
         </div>
-        <div className="md:col-span-1 shadow rounded-2xl px-6 py-12 bg-gray-900 overflow-hidden ">
+        <div className="md:col-span-1 h-min shadow rounded-2xl px-6 py-12 bg-gray-900 overflow-hidden ">
           <MyForm />
         </div>
       </div>
