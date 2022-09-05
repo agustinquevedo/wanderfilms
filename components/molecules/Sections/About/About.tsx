@@ -26,13 +26,14 @@ const About = () => {
             src={Agustin}
             className="rounded-t-2xl"
           />
-          <div className="p-6">
+          <div className="p-6 flex flex-col justify-between">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
               Agustin Quevedo
             </h5>
             <p className="font-normal text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Technology geek, travel and lifestyle photographer, focused on
+              creating content to help brands and entrepreneurs stand out
+              online.
             </p>
             <div className="pt-4">
               <a
@@ -116,11 +117,8 @@ const About = () => {
               Marc Vilalta
             </h5>
             <p className="font-normal text-gray-400">
-              Is a self tought filmmaker from Spain who’s passions is to share
-              stories that motivate people to follow his dreams. He describes
-              himself like an adrenaline yonkie and… if you see somebody jumping
-              from crazy heights while doing a backflip there is a high chance
-              it’s him.
+              He is a self-taught filmmaker from Spain whose passion is to share
+              stories that motivate people to follow their dreams.
             </p>
             <div className="pt-4">
               <a

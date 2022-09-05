@@ -22,6 +22,6 @@ export const services = [
     title: 'FPV',
     image: FPV,
     description:
-      'FPV stands for First Person View, but the best was to describe it would be like comparing a normal drone as a sport car and FPV as a F1 race car. This takes aerial shooting to the next level, allowing us to get as close as never before to the action, obtaining images that redefine the concept of action filming.',
+      'FPV stands for First Person View, but the best way to describe it would be like comparing a normal drone as a sport car and FPV as a F1 race car. This takes aerial shooting to the next level, allowing us to get as close as never before to the action, obtaining images that redefine the concept of action filming.',
   },
 ]

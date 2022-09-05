@@ -62,7 +62,7 @@ const Video = ({ videos }: { videos: Video[] }) => {
 }
 
 export async function getStaticProps() {
-  const videos = await youtube
+  const videos = youtube
   return { props: { videos } }
 }
 
