@@ -14,7 +14,7 @@ const Video = ({ videos }: { videos: Video[] }) => {
   return (
     <ContentWrapper>
       <div className="py-4 md:py-6 lg:py-8">
-        <Link href="/" scroll={false}>
+        <Link href="/#works" scroll={false}>
           <a className="text-gray-400 hover:text-white cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,10 @@ const Video = ({ videos }: { videos: Video[] }) => {
       </h1>
       <div className=" grid grid-cols-1 gap-y-10 gap-x-6 mb-20 md:grid-cols-2 py-4 md:py-6 lg:py-8 lg:grid-cols-2 xl:grid-cols-2 xl:gap-x-8">
         {videos.map((video) => (
-          <div key={video.id} className="w-full bg-gray-900 rounded-2xl">
+          <div
+            key={video.id}
+            className="w-full bg-gray-900 border border-gray-700"
+          >
             <div className="w-full relative aspect-video">
               <YouTubePlayer
                 url={video.videoUrl}
@@ -50,9 +53,6 @@ const Video = ({ videos }: { videos: Video[] }) => {
                 height={'100%'}
                 className="absolute top-0 left-0"
               />
-            </div>
-            <div className="relative p-8">
-              <h3 className="text-white">{video.title}</h3>
             </div>
           </div>
         ))}

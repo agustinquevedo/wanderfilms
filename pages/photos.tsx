@@ -20,7 +20,7 @@ const Photos = ({ images }: { images: Image[] }) => {
     <ContentWrapper>
       <div className="py-4 md:py-6 lg:py-8">
         <a className="text-gray-400 hover:text-white cursor-pointer">
-          <Link href="/" scroll={false}>
+          <Link href="/#works" scroll={false}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mr-2 -ml-1 w-12 h-12"
