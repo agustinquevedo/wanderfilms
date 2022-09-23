@@ -33,7 +33,12 @@ const Hero = () => {
           muted
           className="z-[2] block absolute top-0 bottom-0 left-0 right-0 w-full h-screen object-cover"
         >
-          <source src={'/video/hero-loop.mp4'} type="video/mp4" />
+          <source
+            src={
+              'https://pyvlrcinsmbkzdwgbdkm.supabase.co/storage/v1/object/public/wanderfilms/video/Compressed%20Heading.mp4?t=2022-09-23T05%3A36%3A37.087Z'
+            }
+            type="video/mp4"
+          />
         </video>
         {/* 
         //
