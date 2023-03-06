@@ -75,11 +75,9 @@ const About = () => {
               Franco Salomon
             </h5>
             <p className="font-normal text-gray-400">
-              After completing his bachelor education with a degree in
-              advertising, soon enough he found his way into the world of
-              content creation, combining the knowledge of strategic planning
-              and branding with the execution both in photography and
-              filmmaking.
+              With a Bachelor degree in Advertising focused on strategic
+              planning, he currently works as a Creative producer at Drobe.media
+              (DK)
             </p>
             <div className="pt-4">
               <a
