@@ -2,14 +2,13 @@ import Image from 'next/image'
 
 import cx from 'classnames'
 
-import { supabase } from '../helpers/supabaseClient'
 import { useState } from 'react'
 import ContentWrapper from '../components/layout/ContentWrapper/ContentWrapper'
 import Link from 'next/link'
 
 export type Image = {
   id: string
-  url: string
+  image: string
   title: string
 }
 
@@ -44,40 +43,76 @@ const Photos = ({ images }: { images: Image[] }) => {
           Photography
         </span>
       </h1>
-      <div className=" grid grid-cols-1 gap-y-10 gap-x-6 mb-20 md:grid-cols-2 py-4 md:py-6 lg:py-8 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+      <div className="grid grid-cols-1 grid-rows-[480px] gap-4 mb-20 md:grid-cols-2 py-4 md:py-6 lg:py-8 lg:grid-cols-3 xl:grid-cols-3 xl:gap-6">
         {images.map((image) => (
-          <a className="group" key={image.id}>
-            <div className="w-full relative aspect-[4/5] cursor-pointer">
-              <Image
-                src={image.url}
-                alt={image.title}
-                loading={'lazy'}
-                layout="responsive"
-                objectFit="scale-down"
-                width={1080}
-                height={1350}
-                className={cx(
-                  'rounded-lg duration-700 ease-in-out group-hover:opacity-75',
-                  isLoading
-                    ? 'scale-110 blur-2xl grayscale'
-                    : 'scale-100 blur-0 grayscale-0'
-                )}
-                onLoadingComplete={() => setLoading(false)}
-              />
-            </div>
-          </a>
+          <div
+            key={image.id}
+            className={cx(
+              'w-full relative cursor-pointer group aspect-portrait'
+            )}
+          >
+            <Image
+              src={image.image}
+              alt={image.title}
+              loading={'lazy'}
+              layout="responsive"
+              objectFit="cover"
+              width={1080}
+              height={1350}
+              className={cx(
+                'duration-700 ease-in-out group-hover:opacity-75',
+                isLoading
+                  ? 'scale-110 blur-2xl grayscale'
+                  : 'scale-100 blur-0 grayscale-0'
+              )}
+              onLoadingComplete={() => setLoading(false)}
+            />
+          </div>
         ))}
       </div>
     </ContentWrapper>
   )
 }
 
-export async function getStaticProps() {
-  const { data } = await supabase.from('images').select('*')
+export const getServerSideProps = async () => {
+  const params = {
+    expression: 'folder=portfolio',
+  }
+  const paramString = Object.keys(params)
+    .map((key) => `${key}=${encodeURIComponent(params[key])}`)
+    .join('&')
+
+  const results = await fetch(
+    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/search?${paramString}`,
+    {
+      headers: {
+        Authorization: `Basic ${Buffer.from(
+          process.env.CLOUDINARY_API_KEY +
+            ':' +
+            process.env.CLOUDINARY_API_SECRET
+        ).toString('base64')}`,
+      },
+    }
+  ).then((r) => r.json())
+
+  console.log('results', results)
+
+  const { resources } = results
+
+  const images = resources.map((resource) => {
+    const { width, height } = resource
+    return {
+      id: resource.asset_id,
+      title: resource.public_id,
+      image: resource.secure_url,
+      width,
+      height,
+    }
+  })
 
   return {
     props: {
-      images: data,
+      images,
     },
   }
 }
