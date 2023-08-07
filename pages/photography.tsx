@@ -77,7 +77,7 @@ export const getServerSideProps = async () => {
 
   const { resources } = results
 
-  const images = resources.map((resource: any) => {
+  const images = resources.map((resource) => {
     const { width, height } = resource
     return {
       id: resource.asset_id,
