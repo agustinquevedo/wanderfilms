@@ -53,7 +53,7 @@ export default function Navigation() {
   return (
     <Disclosure
       as="nav"
-      className={`fixed w-full ${size} flex items-center z-[5]  shadow-sm  ${color} transition-all ease-in duration-300`}
+      className={`fixed w-full ${size} flex items-center z-[5]  ${color} transition-all ease-in duration-300`}
     >
       {({ open }) => (
         <>

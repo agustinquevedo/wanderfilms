@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Hero from '../components/molecules/Hero/Hero'
 import Navigation from '../components/molecules/Navigation/Navigation'
-import About from '../components/molecules/Sections/About/About'
+// import About from '../components/molecules/Sections/About/About'
 import Contact from '../components/molecules/Sections/Contact/Contact'
 import Services from '../components/molecules/Sections/Services/Services'
 import Works from '../components/molecules/Sections/Works/Works'
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       <Works />
 
       {/* About Section */}
-      <About />
+      {/* <About /> */}
 
       {/* Contact Section */}
       <Contact />

@@ -7,7 +7,5 @@
   "editor.formatOnSave": true, // Tell VSCode to format files on save
   "editor.formatOnPaste": true, // Tell VSCode to format files on paste
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "dev"
-  ] // Tell VSCode to use Prettier as default file formatter
+  "githubPullRequests.ignoredPullRequestBranches": ["dev"] // Tell VSCode to use Prettier as default file formatter
 }
